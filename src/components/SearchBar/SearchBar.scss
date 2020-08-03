@@ -1,0 +1,113 @@
+@import "../../BaseStyles/mixins";
+
+.search {
+  // background-color: lightblue;
+  height: 5vh;
+  width: 50%;
+  margin: 0.75rem auto 0 auto;
+  border-radius: 2rem;
+  // box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  &__input-bar {
+    background-color: #f6f6f6;
+    height: 100%;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    border-radius: 2rem;
+    transition: 0.35s all cubic-bezier(1, -0.53, 0.11, 0.64);
+    overflow: hidden;
+
+    &:focus-within {
+      width: 55%;
+      // overflow: visible;
+    }
+  }
+
+  &__icon {
+    color: #212121;
+    margin-right: 0.35rem;
+    font-size: 2rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+
+  &__input {
+    border: none;
+    background-color: #f6f6f6;
+    // height: 70%;
+    flex: 1;
+    font-size: 2rem;
+    border-radius: 2rem;
+    padding-left: 0.1rem;
+
+    @include respond(small-phone) {
+      font-size: 1.5rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #212121;
+      font-size: 1.5rem;
+      margin: auto 0;
+      transform: translateY(-12.5%);
+
+      @include respond(small-phone) {
+        font-size: 1.2rem;
+        transform: translateY(-8.5%);
+      }
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+  }
+
+  // @include respond(big-desktop) {
+  //   height: 3.5vh;
+
+  //   &__input {
+  //     margin-left: -0.25rem;
+  //   }
+  // }
+
+  @include respond(tab-land) {
+    width: 65%;
+  }
+
+  @include respond(tab-port) {
+    width: 90%;
+  }
+
+  @include respond(medium-phone) {
+    width: 100%;
+  }
+
+  @include respond(phone) {
+    &__input-bar {
+      width: 45%;
+
+      &:focus-within {
+        width: 65%;
+        // overflow: visible;
+      }
+    }
+  }
+
+  @include respond(small-phone) {
+    &__input-bar {
+      width: 50%;
+
+      &:focus-within {
+        width: 70%;
+        // overflow: visible;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../BaseStyles/mixins";
+
+.container {
+  //   background-color: #f6f6f6;
+  min-height: 75vh;
+  //   margin-top: 1.25rem;
+  width: 35%;
+  margin: 0.5rem auto 0 auto;
+  padding: 1rem 0;
+  color: black;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__error-message {
+    color: #f6f6f6;
+    // text-align: center;
+    margin: auto;
+  }
+
+  @include respond(tab-land) {
+    width: 45%;
+  }
+  @include respond(tab-port) {
+    width: 60%;
+  }
+
+  @include respond(large-phone) {
+    width: 70%;
+  }
+
+  @include respond(medium-phone) {
+    width: 85%;
+  }
+
+  @include respond(small-phone) {
+    width: 100%;
+  }
+}

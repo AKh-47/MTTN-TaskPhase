@@ -1,0 +1,57 @@
+@import "../../BaseStyles/mixins";
+
+.document {
+  background-color: rgba(246, 246, 246, 0.5);
+  height: 3.25rem;
+  margin: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 50rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  transition: 0.2s all;
+  color: #212121;
+
+  @include respond(big-desktop) {
+    height: 4rem;
+  }
+
+  &__name {
+    font-size: 1rem;
+    flex: 6;
+    text-align: center;
+
+    @include respond(small-phone) {
+      font-size: 0.8rem;
+    }
+  }
+
+  // &:hover {
+  //   transform: translateY(-0.15rem);
+  //   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8);
+  // }
+
+  &__download-button {
+    // color: #f6f6f6;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    transition: 0.2s all;
+
+    &:hover {
+      // font-size: 1.75rem;
+      transform: scale(1.2);
+    }
+    flex: 1;
+  }
+
+  &__link {
+    &:link,
+    &:visited,
+    &:active {
+      color: #212121;
+      // text-decoration: none;
+      // cursor: default;
+    }
+  }
+}
